@@ -1,0 +1,135 @@
+=================================================================
+         INCIDENT RESPONSE ANALYSIS REPORT
+=================================================================
+Analyst:       Priyanshi Dhokiya
+Generated:     2026-05-05 18:23:17
+Log Source:    security.log
+Total Findings: 11
+Critical:      3
+High:          8
+=================================================================
+
+DETAILED FINDINGS:
+-----------------------------------------------------------------
+
+Finding #1
+Severity:      CRITICAL
+Timestamp:     2025-03-01 08:15:27
+User:          admin
+IP Address:    192.168.1.105
+Detail:        5+ failed login attempts detected
+MITRE Tactic:  Credential Access
+MITRE Tech:    T1110.001 - Brute Force: Password Guessing
+Action:        IMMEDIATE ESCALATION REQUIRED
+
+Finding #2
+Severity:      HIGH
+Timestamp:     2025-03-01 02:45:00
+User:          sarah
+IP Address:    185.220.101.45
+Detail:        Login at 2:00 outside business hours
+MITRE Tactic:  Initial Access
+MITRE Tech:    T1078 - Valid Accounts
+Action:        Investigate and monitor
+
+Finding #3
+Severity:      HIGH
+Timestamp:     2025-03-01 02:45:00
+User:          sarah
+IP Address:    185.220.101.45
+Detail:        Connection from known malicious IP: 185.220.101.45
+MITRE Tactic:  Initial Access
+MITRE Tech:    T1078 - Valid Accounts
+Action:        Investigate and monitor
+
+Finding #4
+Severity:      HIGH
+Timestamp:     2025-03-01 03:10:00
+User:          sarah
+IP Address:    185.220.101.45
+Detail:        Accessed sensitive file: payroll.xlsx
+MITRE Tactic:  Discovery
+MITRE Tech:    T1083 - File and Directory Discovery
+Action:        Investigate and monitor
+
+Finding #5
+Severity:      HIGH
+Timestamp:     2025-03-01 03:10:00
+User:          sarah
+IP Address:    185.220.101.45
+Detail:        Connection from known malicious IP: 185.220.101.45
+MITRE Tactic:  Initial Access
+MITRE Tech:    T1078 - Valid Accounts
+Action:        Investigate and monitor
+
+Finding #6
+Severity:      HIGH
+Timestamp:     2025-03-01 03:11:00
+User:          sarah
+IP Address:    185.220.101.45
+Detail:        Accessed sensitive file: passwords.txt
+MITRE Tactic:  Discovery
+MITRE Tech:    T1083 - File and Directory Discovery
+Action:        Investigate and monitor
+
+Finding #7
+Severity:      HIGH
+Timestamp:     2025-03-01 03:11:00
+User:          sarah
+IP Address:    185.220.101.45
+Detail:        Connection from known malicious IP: 185.220.101.45
+MITRE Tactic:  Initial Access
+MITRE Tech:    T1078 - Valid Accounts
+Action:        Investigate and monitor
+
+Finding #8
+Severity:      HIGH
+Timestamp:     2025-03-01 03:12:00
+User:          sarah
+IP Address:    185.220.101.45
+Detail:        Accessed sensitive file: employee_data.xlsx
+MITRE Tactic:  Discovery
+MITRE Tech:    T1083 - File and Directory Discovery
+Action:        Investigate and monitor
+
+Finding #9
+Severity:      HIGH
+Timestamp:     2025-03-01 03:12:00
+User:          sarah
+IP Address:    185.220.101.45
+Detail:        Connection from known malicious IP: 185.220.101.45
+MITRE Tactic:  Initial Access
+MITRE Tech:    T1078 - Valid Accounts
+Action:        Investigate and monitor
+
+Finding #10
+Severity:      CRITICAL
+Timestamp:     2025-03-01 10:00:00
+User:          backdoor_admin
+IP Address:    192.168.1.105
+Detail:        New user account created: backdoor_admin
+MITRE Tactic:  Persistence
+MITRE Tech:    T1136.001 - Create Account: Local Account
+Action:        IMMEDIATE ESCALATION REQUIRED
+
+Finding #11
+Severity:      CRITICAL
+Timestamp:     2025-03-01 10:01:00
+User:          backdoor_admin
+IP Address:    192.168.1.105
+Detail:        Privilege escalation detected for user: backdoor_admin
+MITRE Tactic:  Privilege Escalation
+MITRE Tech:    T1068 - Exploitation for Privilege Escalation
+Action:        IMMEDIATE ESCALATION REQUIRED
+
+=================================================================
+RECOMMENDATIONS:
+-----------------------------------------------------------------
+1. Block IP 192.168.1.105 immediately at firewall level
+2. Reset admin account credentials and enable MFA
+3. Investigate sarah account for full compromise scope
+4. Disable backdoor_admin account immediately
+5. Review all privileged account activity for past 30 days
+=================================================================
+END OF REPORT
+=================================================================
